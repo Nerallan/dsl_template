@@ -1,5 +1,5 @@
 package by.nerallan.dsl_template
 
 data class PageBlock(
-    var content: String?
+    var content: String? = null
 )
