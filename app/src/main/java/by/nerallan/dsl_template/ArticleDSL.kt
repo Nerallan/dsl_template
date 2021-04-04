@@ -8,9 +8,17 @@ class ArticleDSL {
     fun generatePage() {
         val page = page {
             number = 1
-            componentPayload = pageBlock {
-                content = "this is article content"
-            }
+            pageBlocks = listOf(
+                pageBlock {
+                    content = "this is article content"
+                },
+                pageBlock {
+                    content = "this is first article header"
+                },
+                pageBlock {
+                    content = "imageUri"
+                }
+            )
         }
     }
 }
