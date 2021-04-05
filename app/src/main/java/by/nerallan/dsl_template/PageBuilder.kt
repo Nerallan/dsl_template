@@ -3,7 +3,11 @@ package by.nerallan.dsl_template
 class PageBuilder {
 
     var number: Int = -1
-    var pageBlock: PageBlock? = null
+    var pageBlocks: MutableList<PageBlock> = mutableListOf()
 
-    fun build(): Page = Page(number, pageBlock)
+    fun pageBlock(block: PageBlockBuilder.() -> Unit) {
+        pageBlocks.add(PageBlockBuilder().apply(block).build())
+    }
+
+    fun build(): Page = Page(number, pageBlocks)
 }

@@ -8,8 +8,11 @@ class ArticleDSL {
     fun generatePage(): Page {
         return page {
             number = 1
-            pageBlock = pageBlock {
+            pageBlock {
                 content = "this is article content"
+            }
+            pageBlock {
+                content = "this is header"
             }
         }
     }
