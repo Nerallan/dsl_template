@@ -5,8 +5,8 @@ class PageBuilder {
     var number: Int = -1
     var pageBlocks: MutableList<PageBlock> = mutableListOf()
 
-    fun pageBlock(block: PageBlockBuilder.() -> Unit) {
-        pageBlocks.add(PageBlockBuilder().apply(block).build())
+    fun pageBlocks(block: ArrayList<PageBlock>.() -> Unit) {
+        pageBlocks.addAll(ArrayList<PageBlock>().apply(block))
     }
 
     fun build(): Page = Page(number, pageBlocks)

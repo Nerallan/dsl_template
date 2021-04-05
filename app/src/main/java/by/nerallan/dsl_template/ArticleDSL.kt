@@ -5,19 +5,22 @@ fun pageBlock(block: PageBlockBuilder.() -> Unit): PageBlock = PageBlockBuilder(
 
 class ArticleDSL {
 
-    fun generatePage(): Page {
+    private fun generatePage(): Page {
         return page {
             number = 1
-            pageBlock {
-                content = "this is article content"
-            }
-            pageBlock {
-                content = "this is header"
+            pageBlocks {
+                pageBlock {
+                    content = "this is article content"
+                }
+                pageBlock {
+                    content = "this is header"
+                }
             }
         }
     }
 
     fun testPage() {
         val firstPage = generatePage()
+        firstPage.toString()
     }
 }
