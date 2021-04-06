@@ -1,4 +1,8 @@
-package by.nerallan.dsl_template
+package by.nerallan.dsl_template.builder
+
+import by.nerallan.dsl_template.ArticleDSL
+import by.nerallan.dsl_template.model.Page
+import by.nerallan.dsl_template.model.PageBlock
 
 @ArticleDSL
 class PageBuilder {

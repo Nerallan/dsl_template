@@ -1,4 +1,7 @@
-package by.nerallan.dsl_template
+package by.nerallan.dsl_template.generator
+
+import by.nerallan.dsl_template.*
+import by.nerallan.dsl_template.model.Page
 
 class ArticleGenerator {
 

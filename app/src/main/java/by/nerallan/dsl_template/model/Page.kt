@@ -1,4 +1,4 @@
-package by.nerallan.dsl_template
+package by.nerallan.dsl_template.model
 
 data class Page(
     val number: Int,

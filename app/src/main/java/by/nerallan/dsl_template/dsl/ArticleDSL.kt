@@ -1,6 +1,13 @@
 package by.nerallan.dsl_template
 
+import by.nerallan.dsl_template.builder.PageBlockBuilder
+import by.nerallan.dsl_template.builder.PageBuilder
+import by.nerallan.dsl_template.model.Page
+import by.nerallan.dsl_template.model.PageBlock
+import by.nerallan.dsl_template.model.PageBlockType
+
 fun page(block: PageBuilder.() -> Unit): Page = PageBuilder().apply(block).build()
+
 fun pageBlock(block: PageBlockBuilder.() -> Unit): PageBlock =
     PageBlockBuilder().apply(block).build()
 
