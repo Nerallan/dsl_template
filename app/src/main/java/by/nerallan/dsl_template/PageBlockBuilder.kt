@@ -1,5 +1,6 @@
 package by.nerallan.dsl_template
 
+@ArticleDSL
 class PageBlockBuilder {
 
     var content = ""
