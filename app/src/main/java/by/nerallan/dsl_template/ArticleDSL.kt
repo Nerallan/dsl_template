@@ -13,6 +13,9 @@ class ArticleDSL {
                 headerBlock(text = "this is header")
                 textBlock(text = "this is article content")
                 textBlock(text = "this is another article content")
+                complexBlock(
+                    imageBlock(url = "imageUri")
+                )
             }
         }
     }
@@ -25,6 +28,17 @@ class ArticleDSL {
     private fun headerBlock(text: String) = pageBlock {
         type = PageBlockType.HEADER
         content = text
+    }
+
+    private fun imageBlock(url: String) = pageBlock {
+        type = PageBlockType.IMAGE
+        content = url
+    }
+
+    private fun complexBlock(pageBlock: PageBlock) = pageBlock {
+        type = PageBlockType.COMPLEX
+        content = "this is image description"
+        innerBlock = pageBlock
     }
 
     fun testPage() {

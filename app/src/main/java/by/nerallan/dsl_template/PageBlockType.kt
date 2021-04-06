@@ -4,5 +4,7 @@ enum class PageBlockType {
     HEADER,
     FOOTER,
     TEXT,
+    IMAGE,
+    COMPLEX,
     UNDEFINED
 }
