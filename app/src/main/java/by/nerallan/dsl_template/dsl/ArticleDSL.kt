@@ -1,4 +1,4 @@
-package by.nerallan.dsl_template
+package by.nerallan.dsl_template.dsl
 
 import by.nerallan.dsl_template.builder.PageBlockBuilder
 import by.nerallan.dsl_template.builder.PageBuilder

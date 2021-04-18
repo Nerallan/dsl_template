@@ -1,6 +1,6 @@
 package by.nerallan.dsl_template.builder
 
-import by.nerallan.dsl_template.ArticleDSL
+import by.nerallan.dsl_template.annotation.ArticleDSL
 import by.nerallan.dsl_template.model.PageBlock
 import by.nerallan.dsl_template.model.PageBlockType
 
