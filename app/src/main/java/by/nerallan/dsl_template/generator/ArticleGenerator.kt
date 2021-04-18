@@ -15,14 +15,6 @@ class ArticleGenerator {
                 complexBlock(
                     imageBlock(url = "imageUri")
                 )
-
-                // @ArticleDsl doesn't allow to define number value (composite annotated block in each other),
-                // due it belongs to PageBuilder and not to ArrayList<PageBlock>
-//                pageBlock {
-//                    pageBlocks {
-//                        number = 2
-//                    }
-//                }
             }
         }
     }

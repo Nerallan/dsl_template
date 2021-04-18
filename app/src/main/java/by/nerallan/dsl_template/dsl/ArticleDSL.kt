@@ -21,6 +21,11 @@ fun headerBlock(text: String) = pageBlock {
     content = text
 }
 
+fun footerBlock(text: String) = pageBlock {
+    type = PageBlockType.FOOTER
+    content = text
+}
+
 fun imageBlock(url: String) = pageBlock {
     type = PageBlockType.IMAGE
     content = url
