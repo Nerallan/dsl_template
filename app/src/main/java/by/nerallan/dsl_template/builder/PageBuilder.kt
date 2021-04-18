@@ -10,9 +10,22 @@ class PageBuilder {
     var number: Int = -1
     private var pageBlocks: MutableList<PageBlock> = mutableListOf()
 
-    fun pageBlocks(block: ArrayList<PageBlock>.() -> Unit) {
-        pageBlocks.addAll(ArrayList<PageBlock>().apply(block))
+    fun pageBlocks(block: PageBLockContainer.() -> Unit) {
+        val pageBLockContainer = PageBLockContainer().apply(block)
+        pageBlocks.addAll(pageBLockContainer.content)
     }
 
     fun build(): Page = Page(number, pageBlocks)
+}
+
+class PageBLockContainer {
+
+    val content = mutableListOf<PageBlock>()
+
+    @ArticleDSL
+    inline fun pageBlock(block: PageBlockBuilder.() -> Unit): PageBlock {
+        return PageBlockBuilder().apply(block)
+            .build()
+            .also{ content.add(it) }
+    }
 }

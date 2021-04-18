@@ -17,11 +17,11 @@ class MainActivity : AppCompatActivity() {
         val page = page {
             number = 1
             pageBlocks {
-                add(headerBlock(text = "this is article header"))
-                add(textBlock(text = "this is article content"))
-                add(textBlock(text = "this is article another content"))
-                add(textBlock(text = "this is article another content"))
-                add(footerBlock(text = "this is end!"))
+                headerBlock(text = "this is article header")
+                textBlock(text = "this is article content")
+                textBlock(text = "this is article another content")
+                textBlock(text = "this is article another content")
+                footerBlock(text = "this is end!")
             }
         }
         logArticle(page)
